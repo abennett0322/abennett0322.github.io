@@ -1,0 +1,34 @@
+{
+  "name": "andrewbennett-portfolio",
+  "version": "1.0.2",
+  "description": "Professional Portfolio for Andrew Bennett",
+  "main": "js/scripts.js",
+  "scripts": {
+    "watch": "gulp watch"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+    "tech",
+    "coding",
+    "dev",
+    "engineer",
+    "student"
+  ],
+  "author": "Andrew Bennett",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "animate.css": "^3.5.2",
+    "particles.js": "^2.0.0"
+  }
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="ToDo">
+	<head>
+		<meta charset="UTF-8">
+		<title>To-Do List</title>
+
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+
+		<div class="container col-md-6 col-md-offset-3" ng-controller="todoController">
+			<h1 class="header">To-Do List</h1>
+			<!-- Form to add a new To-Do item -->
+			<div id="todo-form">
+				<form name="form" ng-submit="addTodo()">
+					<input type="text" name="newTodo" ng-model="newTodo" autocomplete="off" required />
+					<button ng-disabled="form.$invalid">Add</button>
+				</form>
+			</div>
+			<!-- End of form -->
+			<button class="btn" ng-click="clearCompleted()">Clear Completed</button>
+
+
+			<!-- List of To-Do items -->
+			<div class="todo-list">
+				<ul>
+					<li ng-repeat="todo in todos">
+						<input type="checkbox" id="{{todo}}" ng-model="todo.done" />
+						<label for="{{todo}}"><span ng-class="{'done': todo.done}">
+							{{ todo.title }}
+						</span></label>
+					</li>
+				</ul>
+			</div>
+			<!-- End of To-Do list -->
+
+		</div>
+
+		<script src="../../js/libs/angular/angular.min.js"></script>
+		<script src="js/controllers/todoController.js"></script>
+
+	</body>
+</html>
